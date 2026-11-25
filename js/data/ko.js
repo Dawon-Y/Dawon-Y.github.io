@@ -1,6 +1,37 @@
 /* ============================================================
-    ✏️ 내용 수정은 이 파일만 바꾸면 됩니다.
+   🇰🇷 한국어 (원본)
+   - 링크, 기술 스택, 연도, 수상 여부 같은 공통 정보는 이 파일에서만 고치면
+     영어·일본어 페이지에도 그대로 반영됩니다.
+   - 문장을 고치면 en.js, ja.js의 같은 항목도 함께 고쳐 주세요.
+     (프로젝트는 id로, 경력·수상은 순서로 짝지어집니다)
    ============================================================ */
+window.LANG = window.LANG || {};
+
+const UI_KO = {
+  htmlLang: "ko",
+  title: "양다원 | Developer Portfolio",
+  eyebrow: "FULL-STACK DEVELOPER",
+  heroTitle: "화면부터 서버까지<br />만드는 개발자 <em>양다원</em>입니다.",
+  heroLead: "사용자가 보는 화면과 그 뒤에서 동작하는 API를 함께 만듭니다.",
+  btnProjects: "프로젝트 보기 →",
+  btnResume: "이력서 링크",
+  btnPdf: "이력서 PDF 다운로드",
+  contactTitle: "함께 만들 서비스가 있다면",
+  contactText: "언제든 편하게 연락 주세요.",
+  contactResume: "이력서 보기",
+  contactPdf: "PDF 다운로드",
+  filterAll: "전체",
+  filterAward: "수상작",
+  nowTag: "재학 중",
+  awardBadge: "🏆 수상",
+  whatIDid: "What I did",
+  effortDefault: "노력",
+  hard: "어려움",
+  effort: "노력",
+  result: "성과",
+  github: "GitHub →",
+};
+
 const TIMELINE = [
   { date: "2026.03 – 2026.08", title: "UMC 10th Android 파트장", sub: "Node.js Challenger 병행" },
   { date: "2025.09 – 2026.08", title: "학술 동아리 DC&M 회장", sub: "한성대학교 컴퓨터공학부" },
@@ -24,7 +55,7 @@ const SKILLS = {
    meta: 기간 · 팀 · 담당 / did: 한 일 / effort: 노력 (없으면 빈 배열) */
 const PROJECTS = [
   {
-    emoji: "🍽️", name: "Findish", year: 2026, period: "2026.01 – 2026.06", award: true,
+    emoji: "🍽️", id: "findish", name: "Findish", year: 2026, period: "2026.01 – 2026.06", award: true,
     desc: "AI 맛집 추천 · 예약 서비스 (캡스톤)",
     intro: "자연어로 원하는 식당을 찾고, AI 요약과 비교 분석, 친구와 함께 쓰는 AI 추천(AI Pick)을 거쳐 예약 · 주문까지 이어지는 맛집 서비스입니다.",
     meta: "팀 5명 · 백엔드 API 전체 개발 · AWS 배포",
@@ -50,7 +81,7 @@ const PROJECTS = [
     link: "https://github.com/SinseonSeolnongtang",
   },
   {
-    emoji: "🔍", name: "굿모니터링", year: 2026, period: "2026.09 – 2026.11", award: false,
+    emoji: "🔍", id: "goodmon", name: "굿모니터링", year: 2026, period: "2026.09 – 2026.11", award: false,
     desc: "지자체 캐릭터 IP를 무단으로 쓴 상품을 찾아내는 모니터링 플랫폼",
     meta: "AI/클라우드 온캠퍼스 인턴십 · 팀장 · 상품 데이터 수집 담당",
     did: [
@@ -66,7 +97,7 @@ const PROJECTS = [
     link: "https://github.com/HSU-Oncampus-Internship",
   },
   {
-    emoji: "🔗", name: "NECT", year: 2026, period: "2025.12 – 2026.02", award: false,
+    emoji: "🔗", id: "nect", name: "NECT", year: 2026, period: "2025.12 – 2026.02", award: false,
     desc: "창작자를 위한 프로젝트 팀원 매칭 플랫폼",
     meta: "UMC 9기 Web · 프론트엔드 4명 · 홈, 메인, 매칭 화면 담당",
     did: [
@@ -81,7 +112,7 @@ const PROJECTS = [
     link: "https://github.com/UMC-NECT/Nect-Web",
   },
   {
-    emoji: "🎯", name: "E-Clips", year: 2025, period: "2025.03 – 2025.09", award: true,
+    emoji: "🎯", id: "eclips", name: "E-Clips", year: 2025, period: "2025.03 – 2025.09", award: true,
     desc: "강의 영상을 숏폼으로 바꿔 주는 AI 학습 앱",
     meta: "팀 5명 (프론트 2, 백엔드·AI 3) · 팀장 · 모바일 프론트엔드 담당",
     did: [
@@ -98,7 +129,7 @@ const PROJECTS = [
     link: "https://github.com/2-Clips",
   },
   {
-    emoji: "🤝", name: "All is Well", year: 2025, period: "2025.09 – 2025.12", award: true,
+    emoji: "🤝", id: "alliswell", name: "All is Well", year: 2025, period: "2025.09 – 2025.12", award: true,
     desc: "자연어로 패널을 찾아 주는 RAG 검색 시스템",
     meta: "팀 4명 · 풀스택: UI 디자인·프론트엔드, 로그인·검색 API 담당 (RAG 파이프라인은 AI 팀원 담당)",
     did: [
@@ -114,7 +145,7 @@ const PROJECTS = [
     link: "https://github.com/fourEdiots",
   },
   {
-    emoji: "🛤️", name: "우리가 걸어갈 길", year: 2025, period: "2025.02 – 2025.04", award: true,
+    emoji: "🛤️", id: "path", name: "우리가 걸어갈 길", year: 2025, period: "2025.02 – 2025.04", award: true,
     desc: "시골 버스 정류장의 고령자용 AI 챗봇 키오스크",
     meta: "2025 시스코 이노베이션 챌린지 장려상 · 팀 5명 · 사용자 화면 초기 UI 디자인 · 개발",
     did: [
@@ -129,7 +160,7 @@ const PROJECTS = [
     link: "https://github.com/HSU-ThePathWeAreGoingToWalk",
   },
   {
-    emoji: "🥔", name: "Go, Not Go", year: 2025, period: "2025.09 – 2025.12", award: false,
+    emoji: "🥔", id: "gng", name: "Go, Not Go", year: 2025, period: "2025.09 – 2025.12", award: false,
     desc: "여러 사람이 함께 쓰는 실시간 일정 · 준비물 관리 서비스",
     meta: "웹프레임워크 수업 · 팀 4명 · UI 디자인 · 프론트엔드",
     did: [
@@ -142,7 +173,7 @@ const PROJECTS = [
     link: "https://github.com/web-framework-1-potato-wedges",
   },
   {
-    emoji: "🏥", name: "Dr.Be", year: 2025, period: "2025.12", award: false,
+    emoji: "🏥", id: "drbe", name: "Dr.Be", year: 2025, period: "2025.12", award: false,
     desc: "RAG 기반 질병별 전문의 추천 및 진료 정보 통합 시스템",
     meta: "크롤링 · 프론트엔드 담당",
     did: ["의료 정보 크롤링 및 프론트엔드 개발"],
@@ -151,7 +182,7 @@ const PROJECTS = [
     link: "https://github.com/Doctor-Be",
   },
   {
-    emoji: "🎮", name: "What Is Me?", year: 2025, period: "2025.11 ~ 2025.12", award: false,
+    emoji: "🎮", id: "whatisme", name: "What Is Me?", year: 2025, period: "2025.11 ~ 2025.12", award: false,
     desc: "키워드 추리 게임",
     meta: "UI 디자인 · 게임 로직 담당",
     did: ["UI 디자인, 메인·게임 방법 화면 및 전반적인 게임 로직 구현"],
@@ -160,7 +191,7 @@ const PROJECTS = [
     link: "https://github.com/TeamGonNyong",
   },
   {
-    emoji: "👔", name: "Onfit", year: 2024, period: "2024", award: false,
+    emoji: "👔", id: "onfit", name: "Onfit", year: 2024, period: "2024", award: false,
     desc: "스타일을 기록하고 연결하는 스마트 옷장 앱",
     meta: "Android 프론트엔드 담당",
     did: ["옷장·검색 필터·아이템 추가·옷 상세 화면 구현", "캘린더 메인, 스타일별 outfit 화면 구현"],
@@ -168,7 +199,7 @@ const PROJECTS = [
     stack: ["Kotlin", "Android"],
   },
   {
-    emoji: "📍", name: "Flow", year: 2024, period: "2024", award: false,
+    emoji: "📍", id: "flow", name: "Flow", year: 2024, period: "2024", award: false,
     desc: "Find Location, Optimize Way — 지도 기반 경로 최적화 앱",
     meta: "",
     did: [],
@@ -182,7 +213,9 @@ const AWARDS = [
   { year: 2025, name: "E-Clips", sub: "AI-Powered Educational Platform · DigiCon-25 논문 발표", kind: "🏆 2025 한이음 드림업 프로젝트 장려상 수상" },
   { year: 2025, name: "오늘은 어디 가시나요?", sub: "Location-Based Service", kind: "🏆 2025 시스코 이노베이션 챌린지 장려상 수상" },
   { year: 2025, name: "All is Well", sub: "RAG-Based Panel Search", kind: "🏆 2025학년도 2학기 한성 SW 중심대학 페스티벌 우수상 수상" },
-  { year: 2025, name: "MEDISON", sub: "Medical Innovation", kind: "🥈 창의 융합 역량 경진대회 - 아이디어 부분 대상" },
-  { year: 2025, name: "AIPDND", sub: "AI Service", kind: "🥈 창의 융합 역량 경진대회 - 아이디어 부분 장려상" },
+  { year: 2025, name: "MEDISON", sub: "Medical Innovation", kind: "🥈 창의 융합 역량 경진대회 - 아이디어 부문 대상" },
+  { year: 2025, name: "AIPDND", sub: "AI Service", kind: "🥈 창의 융합 역량 경진대회 - 아이디어 부문 장려상" },
   { year: 2022, name: "웹디자인기능사", sub: "한국산업인력공단 · 2022.09.24 취득", kind: "📜 자격증" },
 ];
+
+window.LANG.ko = { UI: UI_KO, TIMELINE, SKILLS, PROJECTS, AWARDS };

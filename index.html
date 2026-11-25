@@ -21,20 +21,23 @@
         <a href="#projects">Projects</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
-        <button class="theme-btn" id="themeBtn" aria-label="테마 전환">🌙</button>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="ko">KO</button><button data-lang="en">EN</button><button data-lang="ja">JA</button>
+        </div>
+        <button class="theme-btn" id="themeBtn" aria-label="Theme">🌙</button>
         </div>
     </div>
     </nav>
 
     <header class="hero wrap">
-    <p class="eyebrow">FULL-STACK DEVELOPER</p>
-    <h1>화면부터 서버까지<br />만드는 개발자 <em>양다원</em>입니다.</h1>
-    <p class="lead">사용자가 보는 화면과 그 뒤에서 동작하는 API를 함께 만듭니다.</p>
+    <p class="eyebrow" data-i18n="eyebrow">FULL-STACK DEVELOPER</p>
+    <h1 data-i18n-html="heroTitle">화면부터 서버까지<br />만드는 개발자 <em>양다원</em>입니다.</h1>
+    <p class="lead" data-i18n="heroLead">사용자가 보는 화면과 그 뒤에서 동작하는 API를 함께 만듭니다.</p>
     <div class="hero-cta">
-        <a class="btn primary" href="#projects">프로젝트 보기 →</a>
+        <a class="btn primary" href="#projects" data-i18n="btnProjects">프로젝트 보기 →</a>
         <!-- ✏️ 이력서 링크: 노션 '웹에 게시' 주소(notion.site)와 PDF 경로를 넣으세요 -->
-        <a class="btn" href="https://app.notion.com/p/41813ea7df638057ba08c3e022dda08b?source=copy_link" target="_blank" rel="noopener">이력서 링크</a>
-        <a class="btn" href="assets/resume_yangdawon.pdf" download>이력서 PDF 다운로드</a>
+        <a class="btn" href="https://app.notion.com/p/41813ea7df638057ba08c3e022dda08b?source=copy_link" target="_blank" rel="noopener" data-i18n="btnResume">이력서 링크</a>
+        <a class="btn" href="assets/resume_yangdawon.pdf" download data-i18n="btnPdf">이력서 PDF 다운로드</a>
         <a class="btn" href="https://github.com/Dawon-Y" target="_blank" rel="noopener">GitHub</a>
     </div>
     </header>
@@ -72,11 +75,11 @@
 
     <section class="contact" id="contact">
     <div class="wrap">
-        <h2>함께 만들 서비스가 있다면</h2>
-        <p>언제든 편하게 연락 주세요.</p>
+        <h2 data-i18n="contactTitle">함께 만들 서비스가 있다면</h2>
+        <p data-i18n="contactText">언제든 편하게 연락 주세요.</p>
         <div class="hero-cta" style="justify-content:center">
-        <a class="btn primary" href="https://app.notion.com/p/41813ea7df638057ba08c3e022dda08b?source=copy_link" target="_blank" rel="noopener">이력서 보기</a>
-        <a class="btn" href="assets/resume_yangdawon.pdf" download>PDF 다운로드</a>
+        <a class="btn primary" href="https://app.notion.com/p/41813ea7df638057ba08c3e022dda08b?source=copy_link" target="_blank" rel="noopener" data-i18n="contactResume">이력서 보기</a>
+        <a class="btn" href="assets/resume_yangdawon.pdf" download data-i18n="contactPdf">PDF 다운로드</a>
         <a class="btn" href="https://github.com/Dawon-Y" target="_blank" rel="noopener">GitHub @Dawon-Y</a>
         <!-- 이메일을 공개하고 싶다면 아래 주석을 풀고 주소를 넣으세요 -->
         <!-- <a class="btn" href="mailto:you@example.com">Email</a> -->
@@ -86,7 +89,9 @@
 
 <footer>© <span id="year"></span> Dawon Yang · Built with plain HTML &amp; GitHub Pages</footer>
 
-<script src="js/data.js"></script>
+<script src="js/data/ko.js"></script>
+<script src="js/data/en.js"></script>
+<script src="js/data/ja.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
