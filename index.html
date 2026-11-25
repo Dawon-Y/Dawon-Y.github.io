@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>양다원 | Developer Portfolio</title>
+<meta name="description" content="프론트엔드 기반의 풀스택 개발자 양다원의 포트폴리오" />
+<meta property="og:title" content="양다원 | Developer Portfolio" />
+<meta property="og:description" content="프론트엔드 기반의 풀스택 개발자 양다원의 포트폴리오" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="wrap">
+        <a href="#" class="logo">Dawon</a>
+        <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" id="themeBtn" aria-label="테마 전환">🌙</button>
+        </div>
+    </div>
+</nav>
+
+<header class="hero wrap">
+    <p class="eyebrow">FULL-STACK DEVELOPER</p>
+    <h1>화면부터 서버까지<br />만드는 개발자 <em>양다원</em>입니다.</h1>
+    <p class="lead">사용자가 보는 화면과 그 뒤에서 동작하는 API를 함께 만듭니다.</p>
+    <div class="hero-cta">
+        <a class="btn primary" href="#projects">프로젝트 보기 →</a>
+        <a class="btn" href="https://github.com/Dawon-Y" target="_blank" rel="noopener">GitHub</a>
+    </div>
+</header>
+
+<section id="about">
+    <div class="wrap">
+        <div class="sec-head"><h2>About</h2><span class="num">01</span></div>
+        <div class="timeline" id="timeline"></div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="wrap">
+        <div class="sec-head"><h2>Skills</h2><span class="num">02</span></div>
+        <div class="skills" id="skills-grid"></div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="wrap">
+        <div class="sec-head">
+        <h2>Projects</h2>
+        <div class="filters" id="filters"></div>
+        </div>
+        <div class="projects" id="project-grid"></div>
+    </div>
+</section>
+
+<section id="awards">
+    <div class="wrap">
+        <div class="sec-head"><h2>Awards &amp; Certification</h2><span class="num">04</span></div>
+        <div class="awards" id="award-list"></div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="wrap">
+        <h2>함께 만들 서비스가 있다면</h2>
+        <p>언제든 편하게 연락 주세요.</p>
+        <div class="hero-cta" style="justify-content:center">
+        <a class="btn primary" href="https://github.com/Dawon-Y" target="_blank" rel="noopener">GitHub @Dawon-Y</a>
+        <!-- 이메일을 공개하고 싶다면 아래 주석을 풀고 주소를 넣으세요 -->
+        <!-- <a class="btn" href="mailto:you@example.com">Email</a> -->
+        </div>
+    </div>
+</section>
+
+<footer>© <span id="year"></span> Dawon Yang · Built with plain HTML &amp; GitHub Pages</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
